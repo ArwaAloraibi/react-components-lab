@@ -1,14 +1,16 @@
 import './WeatherForecast.css';
-import WeatherIcon from './WeatherIcon';
-import WeatherData from './WeatherData';
 
 const WeatherForecast = ({ day, img, imgAlt, conditions, time }) => {
   return (
     <div className="weather">
+      <div className='weatherIcon'>
+      <img src={img} alt={imgAlt} />
+      </div>
+      <div className='weatherData'>
       <h2>{day}</h2>
-      <WeatherIcon img={img} imgAlt={imgAlt} />
-      <WeatherData conditions={conditions} time={time} />
-
+      <p><span>conditions: </span>{conditions}</p>
+      <p><span>time: </span>{time}</p>
+      </div>
     </div>
   );
 };
